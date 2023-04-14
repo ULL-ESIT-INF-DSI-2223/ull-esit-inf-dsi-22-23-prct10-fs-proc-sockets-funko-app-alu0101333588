@@ -59,27 +59,17 @@ client.on('data', (dataJSON) => {
 });
 */
 
+const client = net.connect({port: 60300});
 
-const client = net.createConnection({ port: 60500 }, () => {
-  console.log("Conectado al servidor.");
+client.write(JSON.stringify({'message': 'Hello world!'}));
+client.end();
 
-  const comando = process.argv[2];
-  const args = process.argv.slice(3).join(" ");
-
-  client.write(JSON.stringify({ comando, args }));
-});
-
-client.on('data', (data) => {
-  const response = JSON.parse(data.toString());
-
-  if (response.error) {
-    console.error(response.error);
-  }
-
-  console.log(response.result);
-  client.end();
+let myResponse = '';
+client.on('data', (chunk) => {
+  myResponse += chunk;
 });
 
 client.on('end', () => {
-  console.log("Desconectado del servidor.");
+  const myObject = JSON.parse(myResponse);
+  console.log(myObject.message);
 });

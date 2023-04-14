@@ -9,7 +9,7 @@ import { exec } from "child_process";
 const server = net.createServer((connection) => {
   // The connection object is emitted when a new connection is made
   // It is the socket object
-  console.log(connection);
+  console.log(connection); 
 });
 
 server.listen(60300);
@@ -133,7 +133,7 @@ const servidor = net.createServer((conexion) => {
 });
 
 servidor.listen(60500, () => {
-  console.log("Waiting for clients to connect.");
+  console.log("Esperando clientes...");
 });
 
 

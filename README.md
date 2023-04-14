@@ -41,18 +41,18 @@ Considerando que se realizan dos modificaciones, primero una y después la otra:
 - Con la llamada a access queda:
     - access
 
-- Con la llamada a watch queda:
+- Con la llamada a watcher queda:
     - access
-    - watch
+    - watcher
 
 - Con la modificación de un archivo queda:
     - access
-    - watch
+    - watcher
     - change
 
 - Con la modificación de otro archivo queda:
     - access
-    - watch
+    - watcher
     - change
     - change
 
