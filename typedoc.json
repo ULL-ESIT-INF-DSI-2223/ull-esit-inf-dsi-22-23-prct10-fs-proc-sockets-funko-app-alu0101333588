@@ -1,6 +1,14 @@
 {
     "entryPoints": [
-      "./src/*/*.ts"
+      "./src/ejercicio1.ts",
+      "./src/ejercicio2.ts",
+      "./src/ejercicio2-pipe.ts",
+      "./src/ejercicio3/cliente.ts",
+      "./src/ejercicio3/coleccionFunkos.ts",
+      "./src/ejercicio3/genero.ts",
+      "./src/ejercicio3/Funko.ts",
+      "./src/ejercicio3/servidor.ts",
+      "./src/ejercicio3/tipoPop.ts"
     ],
     "out": "./docs"
   }
