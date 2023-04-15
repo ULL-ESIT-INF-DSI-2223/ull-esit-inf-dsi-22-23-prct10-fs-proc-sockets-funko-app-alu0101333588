@@ -56,6 +56,14 @@ export class ColeccionFunkos {
   }
 
   /**
+   * Getter del nombre del usuario de la colección
+   * @return _nombreUsuario Nick del usuarioo que tiene la colección
+   */
+  get nombreUsuario () {
+    return this._nombreUsuario;
+  }
+
+  /**
    * Función para añadir un nuevo funko a la Colección
    * @param funko : Funko - es el funko a introducir en la colección
    */
